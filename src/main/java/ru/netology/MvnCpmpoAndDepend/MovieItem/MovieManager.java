@@ -29,7 +29,7 @@ public class MovieManager {
     public MovieItem[] findLast() {
         int newLimit;
         if (resultLength <= 0) {
-            resultLength = 10;
+            resultLength = 0;
         } else {
             resultLength = resultLength;
         }

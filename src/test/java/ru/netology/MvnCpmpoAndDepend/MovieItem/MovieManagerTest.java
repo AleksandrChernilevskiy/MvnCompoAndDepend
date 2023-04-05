@@ -111,7 +111,7 @@ public class MovieManagerTest {
         manager.addMovie(movie13);
         manager.addMovie(movie14);
 
-        MovieItem[] expected = {movie14, movie13, movie12, movie11, movie10, movie9, movie8, movie7, movie6, movie5};
+        MovieItem[] expected = {};
         MovieItem[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
@@ -135,7 +135,7 @@ public class MovieManagerTest {
         manager.addMovie(movie13);
         manager.addMovie(movie14);
 
-        MovieItem[] expected = {movie14, movie13, movie12, movie11, movie10, movie9, movie8, movie7, movie6, movie5};
+        MovieItem[] expected = {};
         MovieItem[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
