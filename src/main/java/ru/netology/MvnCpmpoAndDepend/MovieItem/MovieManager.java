@@ -2,13 +2,13 @@ package ru.netology.MvnCpmpoAndDepend.MovieItem;
 
 public class MovieManager {
 
-    public int resultLength = 10;
-
+    private int newLimit;
     public MovieManager(int newLimit) {
-        this.resultLength = newLimit;
+        this.newLimit = newLimit;
     }
 
     public MovieManager() {
+        newLimit = 10;
     }
 
     private MovieItem[] items = new MovieItem[0];
@@ -27,11 +27,11 @@ public class MovieManager {
     }
 
     public MovieItem[] findLast() {
-        int newLimit;
-        if (resultLength <= 0) {
-            resultLength = 0;
+        int resultLength;
+        if (items.length < newLimit) {
+            resultLength = items.length;
         } else {
-            resultLength = resultLength;
+            resultLength = newLimit;
         }
         MovieItem[] all = getItems();
         MovieItem[] reverseLast = new MovieItem[resultLength];

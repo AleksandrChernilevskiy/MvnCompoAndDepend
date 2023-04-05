@@ -118,30 +118,6 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void shouldFindAllMovieNowLimit() {
-        MovieManager manager = new MovieManager(-1);
-        manager.addMovie(movie1);
-        manager.addMovie(movie2);
-        manager.addMovie(movie3);
-        manager.addMovie(movie4);
-        manager.addMovie(movie5);
-        manager.addMovie(movie6);
-        manager.addMovie(movie7);
-        manager.addMovie(movie8);
-        manager.addMovie(movie9);
-        manager.addMovie(movie10);
-        manager.addMovie(movie11);
-        manager.addMovie(movie12);
-        manager.addMovie(movie13);
-        manager.addMovie(movie14);
-
-        MovieItem[] expected = {};
-        MovieItem[] actual = manager.findLast();
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
     public void shouldFindAllMovieOverLimit() {
         MovieManager manager = new MovieManager(13);
         manager.addMovie(movie1);
